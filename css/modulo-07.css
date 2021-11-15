@@ -1,0 +1,218 @@
+/* Importando CSS de Tabelas */
+@import url('tabelas.css');
+
+/* 
+
+	Herança
+
+	1. Sobreposição / Sobrescreve
+	2. Aplica a último estilo definido
+	3. Prioriza estilo específicas (com seletores mais próximos)
+	4. Se aplica a todas as propriedades
+
+ */
+
+
+ 
+html {
+	font-family: sans-serif;
+	color: #333333;
+}
+
+img {
+	margin-bottom: 0.5rem;
+}
+
+p {
+	color: #454545;
+}
+
+header p {
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+
+/* 
+
+	Combinadores 
+	
+	(espaço) seletor descendente 
+	(>) combinador de seletores filhos
+	(+) combinador de elementos irmãos adjacentes / que vem logo na sequencia
+	(~) combinador de elementos irmãos geral / após elemento de referência
+
+	
+*/
+
+
+header h2 {
+	font-size: 7.2rem;
+	font-weight: 100;
+	display: inline;
+}
+
+.h2 {
+
+	font-size: 7.2rem;
+	font-weight: 100;
+	display: inline;
+	color: #888;
+}
+
+header > h2 {
+	font-weight: 600;
+}
+
+
+h2 ~ h5 {
+	font-size: 1.2rem;
+}
+
+div ~ p {
+	text-transform: uppercase;
+}
+
+.titulo {
+	height: 150px;
+	margin-top: 20px;
+	margin-left: 0.5px;
+	background-image: url(../images/fundo.jpg);
+	padding-bottom: 0px;
+}
+
+/* Pseudo-classes */
+
+a {
+	color: #555555;
+	text-decoration: none; /* o padrão é underline */
+	font-size: 1.5rem;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+a:visited {
+	color: #f00;
+}
+
+a:active {
+	color: #096;
+}
+
+a:hover {
+	color: #009;
+	background: #eee;
+}
+
+h2:hover {
+	color: rgba(184, 12, 0, .8);
+}
+
+
+/* 
+	Tipografia
+*/
+
+html {
+	font-family: sans-serif;
+}
+
+h1, h2, h3 {
+	font-weight: 400;
+	font-family: 'Limelight', cursive;
+}
+
+p {
+	font-weight: normal;
+	font-size: 1.4rem;
+}
+
+ul {
+	padding-left: .5rem;
+	margin-left: .5rem;	
+}
+
+li {
+	letter-spacing: 0.01rem;
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+
+h3 {
+	/* declaração resumida / completa */
+	font: italic bold 1.2rem/2 sans-serif;
+}
+
+
+/* 
+
+	Cores
+
+*/
+
+body {
+	background: url('../images/pattern.png') center top repeat #EEEEEE;
+}
+
+section {
+	background: rgba(255, 255, 255, 0.95);
+}
+
+p {
+	color: blue;
+	color: #034589;
+}
+
+header,
+footer {
+	background-color: black;
+}
+
+footer p {
+	color: rgb(255, 255, 255);
+}
+
+.navegacao {
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 0.5rem;
+	border-radius: 10px;
+}
+
+.navegacao li a {
+	color: white;
+	font-size: 1.4rem;
+}
+
+.navegacao li a:hover {
+	background-color: rgba(184, 12, 0, .5);
+	color: #000000;
+	font: 1.8rem bold;
+	padding: 0.25rem;
+	border-radius: 25px;
+}
+
+/** tentantiva de criar um recurso de media variante entre diversos dispositivos**/
+
+@media (min-width:320px) and (max-width: 420px){
+	section{
+		background-color:#ffd700;
+	}
+	.h2{
+		font-size: 4.2rem;
+	}
+
+	.titulo{
+		background-position: 80%;
+	}
+}
+
+@media (min-width:421px) and (max-width:768px){
+	section{
+		background-color: #ffd700;
+	}	
+
+	.titulo{
+		background-position: 80%;
+	}
+}
